@@ -201,14 +201,14 @@
     <br>
     
     <h3>Ejercicio 12</h3>
-    <h1>
+    <h2>
         Comparativa de reproductores MP3
-       </h1>
+       </h2>
       </div>
       <div class="subheader">
-       <h2>
+       <h4>
         Tabla comparativa de las características técnicas de los reproductores MP3
-       </h2>
+       </h4>
       </div>
       <table>
        <tr>
@@ -225,7 +225,7 @@
         </td>
        <tr>
         <td>
-         Capacidad de almacenamiento
+        <b> Capacidad de almacenamiento </b>
         </td>
         <td>
          4GB (1,000 canciones)
@@ -245,7 +245,7 @@
        </tr>
        <tr>
         <td>
-         Colores
+        <b> Colores </b>
         </td>
         <td>
             <img src="fotos/color_blanco.png" alt="color_blanco">
@@ -266,7 +266,7 @@
        </tr>
        <tr>
         <td>
-         Pantalla
+        <b> Pantalla</b>
         </td>
         <td colspan="3">
          LCD de 3 cm (diagonal) con retroiluminación
@@ -277,7 +277,7 @@
        </tr>
        <tr>
         <td rowspan="2">
-         Tiempo de carga
+        <b>Tiempo de carga</b>
         </td>
         <td colspan="3" rowspan="2">
          Unas 3 horas
@@ -294,48 +294,93 @@
     <br>
     <br>
     
-    <h3>Ejercicio 13</h3>
-    <p>Rellena tu CV
-        Nombre
-        Apellidos
-        Contraseña
-        DNI
-        Sexo
-        Hombre
-        Mujer
-        Incluir mi foto Seleccionar archivo nada seleccionado
-        ✔ Suscribirme al boletín de novedades
-        Guardar cambios   Borrar los datos introducidos</p>
-    <br>
-    <br>
-    
+ 
     <h3>Ejercicio 14</h3>
-    <p>Rellena tu CV
-        -Datos personales- 
-        Provincia
-        selecciona -
-        Fecha de nacimiento
-        de Enero
-        Temas de interés
-        Administración de bases de datos
-        Análisis y programación Arquitectura
-        Calidad
-        ERP, CRM, Business Intelligence</p>
+    <h2>Rellena tu CV</h2>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="provincia">Provincia</label>
+        <select id="provincia">
+            <option>- selecciona -</option>
+            <option value="valencia">Valencia</option>
+            <option value="castellon">Castellon</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="madrid">Madrid</option>
+            </select>
+        <br><br>
+        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+        <input type="number" id="dia" placeholder="dd" size="2">
+        <select id="mes">
+            <option>Enero</option>
+        </select>
+        <input type="number" id="anio" placeholder="aaaa" size="4">
+ 
+    <br>
+ 
+        <legend>Temas de interés</legend>
+       <textarea name="temasinteres" id="temasinteres">
+Administración de bases de datos
+Análisis y programación
+Arquitectura
+Calidad
+ERP, CRM, Business Intelligence</textarea>
+ 
+
+    </fieldset>
     <br>
     <br>
     
     <h3>Ejercicio 15</h3>
- <p>Información sobre el producto
-    -Datos básicos-
-     Nombre
-    Descripción
-    Foto Seleccionar archivo nada seleccionado
-    Añadir contador de visitas
-    -Datos económicos-
-    Precio € Impuestos 4%
-    Promoción
-    Ninguno
-    Transporte gratuito
-    Descuento 5%</p>
+    <h2>Información sobre el producto</h2>
+    <fieldset>
+        <legend>Datos básicos</legend>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        
+        <label for="descripcion">Descripción</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" >
+
+        </textarea><br>
+        
+        <label for="foto">Foto</label>
+        <input type="file" id="foto" name="foto" style="display: inline-block;">
+        <br>
+        <br>
+        <input type="checkbox" id="contador" name="contador">
+        <label for="contador">Añadir contador de visitas</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Datos económicos</legend>
+        <label for="precio">Precio</label>
+        <input type="text" id="precio" name="precio" style="display: inline-block; width: 50px;">
+        <span>€</span>
+        <br>
+        <label for="impuestos">Impuestos</label>
+        <select id="impuestos" name="impuestos" style="display: inline-block;">
+            <option value="1%">1%</option>
+            <option value="2%">2%</option>
+            <option value="3%">3%</option>
+            <option value="4%">4%</option>
+            <option value="5%">5%</option>
+            <option value="6%">6%</option>
+            <option value="7%">7%</option>
+            <option value="8%">8%</option>
+            <option value="9%">9%</option>
+
+        </select>
+        <br>
+        <label>Promoción</label>
+        <br>
+        <input type="radio" id="ninguno" name="promocion" value="ninguno" checked>
+        <label for="ninguno">Ninguno</label>
+        <br>
+        <input type="radio" id="transporte" name="promocion" value="transporte">
+        <label for="transporte">Transporte gratuito</label>
+        <br>
+        <input type="radio" id="descuento" name="promocion" value="descuento">
+        <label for="descuento">Descuento 5%</label>
+    </fieldset>
 </body>
 </html>
