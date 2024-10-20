@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJERCICIOS DE HTML/XHTML</title>
 </head>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    </style>
 <body>
     <h1>EJERCICIOS DE HTML/XHTML</h1>
     <h3>Ejercicio 1</h3>
@@ -104,101 +114,183 @@
     <h3>Ejercicio 6</h3>
     <p>estan las paginas creadas</p>
    
-    <h3>Ejercicio 7</h3>
-<p>Menú
-    Inicio • Noticias
-    • Recientes
-    。 Más leídas • Más valoradas</p>
-    <br>
-    <br>
-
     <h3>Ejercicio 8</h3>
-    <p>Menú
-        Inicio
-        • Noticias
-        o Recientes
-        。 Más leídas
-        • Más valoradas
-        • Artículos
-        1. XHTML
-        2. CSS
-        3. JavaScript
-        4. Otros
-        • Contacto
-        Email
-        nombre@direccion.com
-        Teléfono
-        900 900 900
-        Fax
-        900 900 900
-    </p>
+    <h2>Menú</h2>
+    <ul>
+        <li>Inicio</li>
+        <li><b>Noticias</b>
+            <ul>
+                <li>Recientes</li>
+                <li>Más leídas</li>
+                <li>Más valoradas</li>
+            </ul>
+        </li>
+        <li>Artículos
+            <ol>
+                <li>XHTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Otros</li>
+            </ol>
+        </li>
+        <li>Contacto</li>
+        <dl>
+            <dt><em>Email</em></dt>
+                <dd><b>nombre@direccion.com</b></dd>
+            <dt><em>Teléfono</em></dt>
+                <dd>900 900 900</dd>   
+            <dt><em>Fax</em></dt>
+                <dd>900 900 900</dd>
+        </dl>
+    </ul>
+
     <br>
     <br>
 
     <h3>Ejercicio 9</h3>
-    <p>Volver a la pagina principal
-        Ultimos proyectos
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis posuere justo. Nam vel neque.
-        Proyecto 1
-        Etiam consectetuer, mauris vitae cursus scelerisque, dui turpis dignissim justo, et euismod enim odio sit amet erat.</p>
+    <img src="favicon.ico" alt="favicon">
     <br>
-    <br>
-    
-    <h3>Ejercicio 10</h3>
-    <p>Su pedido
-        Nombre producto
-        Precio unitario Unidades Subtotal
-        Reproductor MP3 (80 GB)
-        192.02
-        1
-        192.02
-        Fundas de colores
-        2.50
-        5
-        12.50
-        Reproductor de radio & control remoto 12.99 TOTAL
-        1
-        12.99
-        7
-        207.51</p>
-    <br>
+    <a href="indice.html">Volver a la pagina principal</a>
+    <h1>Ultimos proyectos</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec iaculis posuere justo. Nam vel neque.</p>
+        <h3>Proyecto 1</h3>
+        <p>
+        Etiam consectetuer, mauris vitae cursus scelerisque, dui turpis dignissim justo, et euismod enim odio sit amet erat.
+        </p>
+        <img src="fotos/proyecto1.png" alt="proyecto1">
+
     <br>
     
     <h3>Ejercicio 11</h3>
-    <p>Resultado de la búsqueda
-        Resultado de la búsqueda
-        Imagen
-        Datos
-        Portátil - 3 GHz - 4 GB RAM
-        Comprar: 2.990 € 2.599 €
-        Videocámara - Alta definición 1080p - 60 GB
-        Comprar: 1.099 € 999 €
-        Televisor - 46" - Full HD
-        Comprar: 1.999 € 1.799 €
-        Móvil - 3G - Wi-Fi - 8 GB
-        Comprar: 399 € 349 €</p>
+        <h2>Resultado de la búsqueda</h2>
+        <p>Resultado de la búsqueda</p>
+        <table border="1px">
+            <tr>
+                <td>Imagen</td>
+                <td>Datos</td>
+            </tr>
+            <tr>
+                <td><img src="fotos/1.png" alt="Portátil"></td>
+                <td>Portátil - 3 GHz - 4 GB RAM <br>
+                    Comprar: <s>2.990 €</s> 2.599 €
+
+                </td>
+            </tr>
+            <tr>
+                <td><img src="fotos/2.png" alt="Videocámara"></td>
+                <td>Videocámara - Alta definición 1080p - 60 GB <br>
+                    Comprar: <s>1.099 €</s>999 € 
+
+                </td>
+            </tr>
+            <tr>
+                <td><img src="fotos/3.png" alt="Televisor"></td>
+                <td>Televisor - 46" - Full HD <br>
+                    Comprar: <s>1.999 €</s> 1.799 €
+                </td>
+            </tr>
+            <tr>
+                <td><img src="fotos/4.png" alt="Móvil"></td>
+                <td>Móvil - 3G - Wi-Fi - 8 GB <br>
+                    Comprar: <s>399 €</s> 349 €
+                </td>
+               </tr>
+        </table>
+
     <br>
     <br>
     
     <h3>Ejercicio 12</h3>
-    <p>Comparativa de reproductores MP3
-        Tabla comparativa de las caracteristicas técnicas de los reproductores MP3
-        Capacidad de almacenamiento
-        MP3 mini
-        MP3 grande
-        4GB (1.000 canciones)
-        8GB (2.000 canciones)
-        16GB (4.000 canciones)
-        30GB (7.500 canciones)
-        80GB (20.000 canciones)
-        Colores
-        Pantalla
-        LCD de 3 cm (diagonal) con retroiluminación
-        LCD de 6 cm (diagonal) con retroiluminación
-        Tiempo de
-        Unas 3 horas carga
-        Unas 4 horas
-        Unas 2 horas para alcanzar el 80% de la capacidad</p>
+    <h1>
+        Comparativa de reproductores MP3
+       </h1>
+      </div>
+      <div class="subheader">
+       <h2>
+        Tabla comparativa de las características técnicas de los reproductores MP3
+       </h2>
+      </div>
+      <table>
+       <tr>
+        <th rowspan="2">
+       
+        </th>
+       </tr>
+       <tr>
+        <td colspan="3">
+        <img src="fotos/mp3_pequeno_blanco.png" alt="mp3_pequeno_blanco">         <img src="fotos/mp3_pequeno_negro.png" alt="mp3_pequeno_negro"> <br>      <p><b>MP3 mini</b></p>    
+        </td>
+        <td colspan="2">
+         <img src="fotos/mp3_grande_blanco.png" alt="mp3_grande_blanco">          <img src="fotos/mp3_grande_negro.png" alt="mp3_grande_negro"> <br>  <p><b>MP3 grande</b></p>
+        </td>
+       <tr>
+        <td>
+         Capacidad de almacenamiento
+        </td>
+        <td>
+         4GB (1,000 canciones)
+        </td>
+        <td>
+         8GB (2,000 canciones)
+        </td>
+        <td>
+         16GB (4,000 canciones)
+        </td>
+        <td>
+         30GB (7,500 canciones)
+        </td>
+        <td>
+         80GB (20,000 canciones)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Colores
+        </td>
+        <td>
+            <img src="fotos/color_blanco.png" alt="color_blanco">
+        </td>
+        <td>
+            <img src="fotos/color_negro.png" alt="color_negro">
+            <img src="fotos/color_verde.png" alt="color_verde">
+            <img src="fotos/color_azul.png" alt="color_azul">
+            <img src="fotos/color_rosa.png" alt="color_rosa">
+        </td>
+        <td>
+            <img src="fotos/color_negro.png" alt="color_negro">
+        </td>
+        <td colspan="2">
+        <img src="fotos/color_blanco.png" alt="">
+        <img src="fotos/color_negro.png" alt="">
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Pantalla
+        </td>
+        <td colspan="3">
+         LCD de 3 cm (diagonal) con retroiluminación
+        </td>
+        <td colspan="2">
+         LCD de 6 cm (diagonal) con retroiluminación
+        </td>
+       </tr>
+       <tr>
+        <td rowspan="2">
+         Tiempo de carga
+        </td>
+        <td colspan="3" rowspan="2">
+         Unas 3 horas
+        </td>
+        <td colspan="2"> Unas 4 horas</td>
+        <tr>
+        
+        <td colspan="2">
+         Unas 2 horas para alcanzar el 80% de la capacidad
+        </td>
+    </tr>
+       </tr>
+      </table>
     <br>
     <br>
     
