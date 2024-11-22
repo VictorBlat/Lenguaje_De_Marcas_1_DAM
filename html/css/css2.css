@@ -1,0 +1,63 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 13px;
+}
+#titulo{
+    font-size: 25px;
+    color: cadetblue;
+}
+#subtitulo{
+    font-size: 20px;
+    color: blue;
+}
+p strong{
+    color: red;
+}
+
+span.destacado, 
+.especial, 
+table strong{
+    color: goldenrod;
+}
+a {
+    color: red;
+    /*text-decoration: none;*/
+}
+a em{
+    color: blue;
+}
+span.especial{
+    color: purple;
+}
+caption{
+    text-align: center;
+    font-size: 12px;
+    color: blue;
+}
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    font-size: 13px;
+}
+tbody td{
+    color: green;
+}
+
+th[scope="row"]:not(.especial) {
+    color: red;
+}
+tfoot{
+    color: red;
+}
+#adicional{
+    color: olive;
+}
+#adicional span#especial{
+    color: deeppink;
+}
+#adicional a{
+    color: green;
+}

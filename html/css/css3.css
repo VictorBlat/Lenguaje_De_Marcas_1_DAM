@@ -1,0 +1,14 @@
+div#Siguiente{
+    float: right;
+}
+div#Anterior{
+    float: left;
+}
+div#cuadrado{
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid grey;
+    background-color: lightgray;
+}
