@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro digital="no">
+           <titulo>Un fantsma en el sistema</titulo> 
+           <editorial>Capitan Swing</editorial>
+           <publicacion>2017</publicacion>
+    </libro>
+    <libro digital="si">
+        <titulo>Los hombres que susurran a las maquinas</titulo> 
+        <editorial>Booket</editorial>
+        <publicacion>2015</publicacion>
+    </libro>
+     <libro digital="si">
+        <titulo>El arte de la invisibilidad</titulo> 
+        <editorial>Anaya</editorial>
+        <publicacion>2018</publicacion>
+    </libro>
+
+</libros>
