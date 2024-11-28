@@ -3,78 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listas Menu</title>
 </head>
 <body>
-    <style> 
-        ul { 
-            list-style: none; 
-        } 
-        #nav ul { 
-            display: none; 
-        } 
-        ul li { 
-            width: 125px; 
-            padding: 10px; 
-            background-color: cadetblue; 
-            text-align: center; 
-            float: left; 
-            border-right: 1px solid darkblue; 
-            position: relative; 
-        } 
-        ul li:last-child{ 
-            border: none; 
-        } 
-        ul li:hover{ 
-            cursor: ne-resize; 
-        } 
-        #nav li:hover ul { 
-            display: block; 
-            position: absolute; 
-            left: 0; 
-            top: 39px; 
-            padding-left: 0; 
-        } 
-        #nav ul li { 
-            float: none; 
-            border-right: 0; 
-            border-bottom: 1px dotted darkblue; 
-        } 
-        #nav li:hover ul li:last-child{ 
-            border-bottom: 0; 
-        } 
-        #nav li:hover ul li:first-child{ 
-            border-top: 1px solid orange; 
-        } 
-        </style> 
-        <body> 
-        <h1>Ejemplo de listas para menú</h1> 
-        
-        <!--Menú de primer nivel Home, Contacto, Proveedores--> 
-        
-        <!--Menú de segundo nivel para home vacio--> 
-        
-        <!--Menú de segundo nivel para Contacto: Localización, Horario--> 
-        
-        <!--Menú de segundo nivel para Proveedores: Locales, europeos, Mundiales--> 
-        <ul id="nav"> 
-            <li>Home</li> 
-            <li>Contacto 
-        <ul> 
-            <li>Localización</li> 
-            <li>Horario</li> 
-        </ul> 
-        </li> 
-        <li> 
-            Proveedores 
-        <ul> 
-            <li>Locales</li> 
-            <li>Europeos</li> 
-            <li>Mundiales</li> 
-        </ul> 
-        </li> 
-        <ul> 
-        
-         
+    <h1>Ejemplo de listas para menu</h1>
+    <ul>
+        <li>Home</li>
+        <li>Contacto
+            <ul>
+                <li>Localización</li>
+                <li>Horario</li>
+            </ul>
+        </li>
+        <li>Proveedores
+            <ul>
+                <li>Locales</li>
+                <li>Europeos</li>
+                <li>Mundiales</li>
+            </ul>
+
+        </li>
+    </ul>
 </body>
 </html>
