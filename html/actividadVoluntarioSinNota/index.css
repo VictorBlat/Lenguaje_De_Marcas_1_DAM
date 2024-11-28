@@ -1,0 +1,10 @@
+#cabecera {
+    height: 180px;
+    background-color: black;
+}
+#menu{
+    float: left;
+    width: 220px;
+    background-color: goldenrod;
+    height: 1000px;
+}

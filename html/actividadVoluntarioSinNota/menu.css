@@ -1,0 +1,23 @@
+ul{
+    list-style: none;
+}
+#nav ul{
+    display: none;
+}
+ul li {
+    width: 105px;
+    background-color: goldenrod;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li:last-child{
+    border: 0;
+}
+#nav li:hover ul {
+    display:block;
+    position: absolute; 
+     
+
+}
