@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resultados>
+    <ciudades>
+        <ciudad>
+        <nombre>Nueba Deli</nombre>
+        <pais continente="Asia">India</pais>
+        </ciudad>
+        <ciudad>
+        <nombre>Lisboa</nombre>
+        <pais continente="Europa">Portugal</pais>
+        </ciudad>
+        <ciudad>
+        <nombre>El Cairo</nombre>
+        <pais continente="África">Egipto</pais>
+        </ciudad>
+    </ciudades>
+    <!--Solución optimizada-->
+    <geografia>
+        <continentes>
+            <continente>
+                <nombre>África</nombre>
+                <paises>
+                    <pais>
+                    <nombre>Egipto</nombre>
+                    <ciudades>
+                        <ciudad>
+                            <nombre>El Cairo</nombre>
+                            <nhabitantes>30000000</nhabitantes>
+                            <extension></extension>
+                        </ciudad>
+                    </ciudades>
+                    </pais>
+                </paises>
+            </continente>
+            <continente>
+                <nombre>Europa</nombre>
+            </continente>
+            <continente>
+                <nombre>Asia</nombre>
+            </continente>
+            <continente>
+                <nombre>America</nombre>
+            </continente>
+            <continente>
+                <nombre>Oceania</nombre>
+            </continente>
+        </continentes>
+    </geografia>
+</resultados>

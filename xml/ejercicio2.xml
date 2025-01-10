@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Solución inicial-->
+
+<historia>
+    <hechosh>
+        <hechoh>
+            <nombre>IBM da a conocer el PC</nombre>
+            <dia>12</dia>
+            <mes>08</mes>
+            <anyo>1981</anyo>
+        </hechoh>
+        <hechoh>
+            <nombre>Se funda Google</nombre>
+            <dia>04</dia>
+            <mes>09</mes>
+            <anyo>1998</anyo>
+        </hechoh>
+        <hechoh>
+            <nombre>Se funda Facebook</nombre>
+            <dia>04</dia>
+            <mes>02</mes>
+            <anyo>2004</anyo>
+        </hechoh>
+    </hechosh>
+</historia>
+
+<!--Solución optimizada-->

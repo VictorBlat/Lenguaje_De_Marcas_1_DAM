@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="estilo.css" type="text/css"?>
+<datos>
+    <dato>
+        <nombre>Sofá</nombre>
+        <precio>642</precio>
+    </dato>
+    <dato>
+        <nombre>Mesa</nombre>
+        <precio>305</precio>
+    </dato>
+    <dato>
+        <nombre>Lampara</nombre>
+        <precio>89</precio>
+    </dato>
+</datos>
