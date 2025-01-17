@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- con errores
+<triangulo base="7"altura="5">
+<triangulo base="2"altura="6">
+<triangulo base="3"altura="3">
+-->
+<!-- sin errores -->
+<triangulos>
+    <triangulo>
+        <base>7</base>
+        <altura>5</altura>
+    </triangulo>
+    <triangulo>
+        <base>2</base>
+        <altura>7</altura>
+    </triangulo>
+    <triangulo>
+        <base>3</base>
+        <altura>3</altura>
+    </triangulo>
+</triangulos>
