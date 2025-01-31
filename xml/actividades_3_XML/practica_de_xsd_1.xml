@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="practica_de_xsd_1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<inventores>
+    <inventor>manolo</inventor>
+    <inventor>jose</inventor>
+</inventores>

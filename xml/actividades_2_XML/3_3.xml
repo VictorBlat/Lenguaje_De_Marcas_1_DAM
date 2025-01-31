@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cosasPorHacer [
 <!ELEMENT cosasPorHacer (cosa)*>
-<!ELEMENT cosa ANY>
+<!ELEMENT cosa (#PCDATA)>
 <!ATTLIST cosa fecha CDATA #REQUIRED>
 <!ATTLIST cosa asunto CDATA #IMPLIED>
 <!ATTLIST cosa fechaLimite CDATA #REQUIRED>
