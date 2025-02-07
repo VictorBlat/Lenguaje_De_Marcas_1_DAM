@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="parte_xsd.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+    <precios>
+        <precio moneda="euro">9.23</precio>
+        <precio moneda="euro">1.2</precio>
+    </precios>
+    
