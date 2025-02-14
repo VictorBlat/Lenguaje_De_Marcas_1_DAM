@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE familia_addams [ 
+    <!ELEMENT familia_addams (miembro+)>  
+    <!ELEMENT miembro (nombre, rol, edad, personalidad, relaciones)> 
+    <!ELEMENT nombre (#PCDATA)> 
+    <!ELEMENT rol (#PCDATA)> 
+    <!ELEMENT edad (#PCDATA)> 
+    <!ELEMENT personalidad (#PCDATA)> 
+    <!ELEMENT relaciones (relacion*)> 
+    <!ELEMENT relacion (nombre, tipo)> 
+    <!ELEMENT tipo (#PCDATA)> 
+]> 
+
+<familia_addams> 
+    <miembro> 
+        <nombre>Gomez Addams</nombre> 
+        <rol>Padre</rol> 
+        <edad>cuarenta y cinco</edad>
+        <personalidad>Apasionado, extravagante, cariñoso</personalidad> 
+        <relaciones> 
+            <relacion> 
+                <nombre>Morticia Addams</nombre> 
+                <tipo>Esposo</tipo> 
+            </relacion> 
+            <relacion> 
+                <nombre>Wednesday Addams</nombre> 
+                <tipo>Padre</tipo> 
+            </relacion> 
+        </relaciones> 
+    </miembro> 
+
+    <miembro> 
+        <nombre>Morticia Addams</nombre> 
+        <rol>Madre</rol> 
+        <edad>40</edad> 
+        <personalidad>Elegante, misteriosa, protectora</personalidad> 
+        <relaciones> 
+            <relacion> 
+                <nombre>Gomez Addams</nombre> 
+                <tipo>Esposa,Aliado</tipo> 
+            </relacion> 
+          </relaciones> 
+    </miembro> 
+
+    <miembro> 
+        <nombre>Wednesday Addams</nombre> 
+        <rol>Hija</rol> 
+        <edad>trece</edad>
+        <personalidad>Inteligente, sarcástica, macabra</personalidad> 
+        <relaciones> 
+            <relacion> 
+                <nombre>Pugsley Addams</nombre> 
+                <tipo>Hermano,Confidente</tipo> 
+            </relacion> 
+        </relaciones> 
+    </miembro> 
+
+    <miembro> 
+        <nombre>Fester Addams</nombre> 
+        <rol>Tío</rol> 
+        <edad>43</edad>
+        <personalidad>Excéntrico, divertido</personalidad> 
+        <relaciones> 
+            <relacion> 
+                <nombre>Gomez Addams</nombre> 
+                <tipo>Hermano</tipo> 
+            </relacion> 
+        </relaciones> 
+    </miembro> 
+
+    <miembro> 
+        <nombre>Lurch</nombre> 
+        <rol>Mayordomo</rol> 
+        <edad>cincuenta</edad>
+        <personalidad>Silencioso, leal</personalidad> 
+        <relaciones> 
+            <relacion> 
+                <nombre>Gomez Addams</nombre> 
+                <tipo>Hermano</tipo> 
+            </relacion> 
+        </relaciones> 
+    </miembro> 
+</familia_addams> 

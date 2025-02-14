@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE witcher_world [
+    <!ELEMENT witcher_world (personaje*)>
+    <!ELEMENT personaje (nombre, raza, habilidades, profesion)>
+    <!ATTLIST personaje id ID #IMPLIED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT raza (#PCDATA)>
+    <!ELEMENT profesion (#PCDATA)>
+    <!ELEMENT habilidades (habilidad+)>
+    <!ELEMENT habilidad (#PCDATA)>
+    <!ATTLIST habilidad tipo (magia|combate|sigilo|alquimia) #REQUIRED>
+]>
+
+<witcher_world>
+    <personaje id="p1">
+        <nombre>Geralt de Rivia</nombre>
+        <raza>Humano</raza>
+        <habilidades>
+            <habilidad tipo="combate">Espadas</habilidad>
+            <habilidad tipo="magia">Señales</habilidad>
+        </habilidades>
+        <profesion>Brujo</profesion>
+    </personaje>
+
+    <personaje id="p2">
+        <nombre>Yennefer de Vengerberg</nombre>
+        <raza>Humana</raza>
+        <habilidades>
+            <habilidad tipo="magia">Teletransportación</habilidad>
+            <habilidad tipo="alquimia">Pociones</habilidad>
+        </habilidades>
+        <profesion>Hechicera</profesion>
+    </personaje>
+
+    <personaje id="p3">
+        <nombre>Ciri</nombre>
+        <raza>Humana</raza>
+        <habilidades>
+            <habilidad tipo="combate">Espadas</habilidad>
+            <habilidad tipo="magia">Portales</habilidad>
+        </habilidades>
+        <profesion>Princesa</profesion>
+    </personaje>
+
+    <personaje>
+        <nombre>Vesemir</nombre>
+        <raza>Humano</raza>
+        <habilidades>
+            <habilidad tipo="combate">Espadas</habilidad>
+            <habilidad tipo="magia">Señales</habilidad>
+        </habilidades>
+        <profesion>Brujo</profesion>
+    </personaje>
+</witcher_world>
