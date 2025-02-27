@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    <xs:simpleType name="tipoAnio">
+        <xs:restriction base="xs:integer">
+            <xs:totalDigits value="4"></xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoMes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="enero"></xs:enumeration>
+            <xs:enumeration value="febrero"></xs:enumeration>
+            <xs:enumeration value="marzo"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="discos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grupo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                            <xs:element name="miembro" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="nacionalidad" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                            <xs:choice minOccurs="0">
+                                <xs:sequence>
+                                    <xs:element name="web"></xs:element>
+                                    <xs:element name="email"></xs:element>
+                                </xs:sequence>
+                                <xs:sequence>
+                                    <xs:element name="calle"></xs:element>
+                                    <xs:element name="localidad"></xs:element>
+                                </xs:sequence>
+                            </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="nom" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="disco" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="interprete"></xs:element>
+                            <xs:element name="titulo"></xs:element>
+                            <xs:element name="discografica" default="CBS">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Sony"></xs:enumeration>
+                                        <xs:enumeration value="CBS"></xs:enumeration>
+                                        <xs:enumeration value="SIRE"></xs:enumeration>
+                                        <xs:enumeration value="OTRAS"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="anio">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="tipoAnio">
+                                            <xs:attribute name="mes" type="tipoMes" use="optional"></xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="stock"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="precio">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"></xs:fractionDigits>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>   
+
+    </xs:element>
+</xs:schema>

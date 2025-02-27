@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="discos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grupo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="longitudTexto"></xs:element>
+                            <xs:element name="miembro" type="longitudTexto" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="nacionalidad" type="longitudTexto" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:choice>
+                                <xs:sequence>
+                                    <xs:element name="web" type="longitudTexto"></xs:element>
+                                    <xs:element name="email" type="longitudTexto"></xs:element>
+                                </xs:sequence>
+                                <xs:sequence>
+                                    <xs:element name="calle" type="longitudTexto"></xs:element>
+                                    <xs:element name="localidad" type="longitudTexto"></xs:element>
+                                </xs:sequence>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="disco" minOccurs="0" maxOccurs="unbounded">
+                
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="longitudTexto">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="dominio">
+        <xs:restriction base="longitudTexto">
+            <xs:pattern value=".+ponprecioamimusica\.org.+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
