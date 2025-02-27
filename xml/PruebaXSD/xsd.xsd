@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="discos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grupo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre"></xs:element>
+                            <xs:element name="miembro" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="nacionalidad" minOccurs="0"></xs:element>
+                                <xs:choice  minOccurs="0">
+                                    <xs:sequence>
+                                        <xs:element name="web"></xs:element>
+                                        <xs:element name="email"></xs:element>
+                                    </xs:sequence>
+                                    <xs:sequence>
+                                        <xs:element name="calle"></xs:element>
+                                        <xs:element name="localidad"></xs:element>
+                                    </xs:sequence>
+                                </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="nom">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="muse"></xs:enumeration>
+                                     <xs:enumeration value="feeder"></xs:enumeration>
+                                      <xs:enumeration value="nvnud"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="disco" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="interprete">
+                                <xs:complexType>
+                                    <xs:attribute name="nom">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="muse"></xs:enumeration>
+                                                <xs:enumeration value="feeder"></xs:enumeration>
+                                                <xs:enumeration value="nvnud"></xs:enumeration>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="titulo" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="discografica" minOccurs="0"></xs:element>
+                            <xs:element name="anio"></xs:element>
+                            <xs:element name="stock"></xs:element>
+                                <xs:choice  minOccurs="0">
+                                    <xs:sequence>
+                                        <xs:element name="web"></xs:element>
+                                        <xs:element name="email"></xs:element>
+                                    </xs:sequence>
+                                    <xs:sequence>
+                                        <xs:element name="calle"></xs:element>
+                                        <xs:element name="localidad"></xs:element>
+                                    </xs:sequence>
+                                </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="precio">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"></xs:fractionDigits>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
