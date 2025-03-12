@@ -6,15 +6,24 @@
                 <xs:element name="guardian" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nombre" minOccurs="1"></xs:element>
+                            <xs:element name="nombre"></xs:element>
                             <xs:element name="alias" minOccurs="0"></xs:element>
-                            <xs:element name="especie" minOccurs="0" type="especie">
+                            <xs:element name="especie">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Humano"></xs:enumeration>
+                                        <xs:enumeration value="Zen-Whoberiana"></xs:enumeration>
+                                        <xs:enumeration value="Kylosiano"></xs:enumeration>
+                                        <xs:enumeration value="Mapache"></xs:enumeration>
+                                        <xs:enumeration value="Flora Colossus"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
                             </xs:element>
                             <xs:choice>
                                 <xs:element name="rol" minOccurs="1"></xs:element>
                                 <xs:element name="cometido" minOccurs="1"></xs:element>
                             </xs:choice>
-                            <xs:element name="habilidades" minOccurs="0" maxOccurs="1">
+                            <xs:element name="habilidades">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="habilidad" minOccurs="1" maxOccurs="10">
@@ -24,12 +33,12 @@
                                                         <xs:attribute name="tipo">
                                                             <xs:simpleType>
                                                                 <xs:restriction base="xs:string">
-                                                                    <xs:enumeration value="adquirida"> </xs:enumeration>
                                                                     <xs:enumeration value="genética"></xs:enumeration>
+                                                                    <xs:enumeration value="adquirida"></xs:enumeration>
                                                                 </xs:restriction>
                                                             </xs:simpleType>
                                                         </xs:attribute>
-                                                    </xs:extension>
+                                                    </xs:extension>                            
                                                 </xs:simpleContent>
                                             </xs:complexType>
                                         </xs:element>
@@ -37,43 +46,33 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" type="idGuardian">
+                        <xs:attribute name="id">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="g_[0-9]{2,7}_[f|m|o]"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="edad" default="Desconocida" type="edad">
+                        <xs:attribute name="planeta_origen">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string"></xs:restriction>
+                            </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="planeta_origen" type="planetaOrigen">
+                        <xs:attribute name="edad">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d{0,}|Desconocida"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:simpleType name="especie">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Humano"></xs:enumeration>
-            <xs:enumeration value="Zen-Whoberiana"></xs:enumeration>
-            <xs:enumeration value="Kylosiano"></xs:enumeration>
-            <xs:enumeration value="Mapache"></xs:enumeration>
-            <xs:enumeration value="Flora Colossus"></xs:enumeration>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="idGuardian">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="g_[0-9]{2,7}_[f|m|o]"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="edad">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{0,}|Desconocida"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="planetaOrigen">
-        <xs:restriction base="xs:string"></xs:restriction>
-    </xs:simpleType>
 </xs:schema>
 
 <!-- 
- 
-
+b. Todos los atributos de guardian son obligatorios. 
 
 -->
