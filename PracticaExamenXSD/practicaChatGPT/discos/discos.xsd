@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="discos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grupo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="longitudTexto"></xs:element>
+                            <xs:element name="miembro" maxOccurs="unbounded" type="longitudTexto"></xs:element>
+                            <xs:element name="nacionalidad" minOccurs="0" type="longitudTexto"></xs:element>
+                            <xs:choice minOccurs="0">
+                                <xs:sequence>
+                                    <xs:element name="web" type="longitudTexto"></xs:element>
+                                    <xs:element name="email">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="[a-z]{1,}@ponprecioamimusica.org"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:sequence>
+                                    <xs:element name="calle" type="longitudTexto"></xs:element>
+                                    <xs:element name="localidad" type="longitudTexto"></xs:element>
+                                </xs:sequence>
+                            </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="nom"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="disco" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="interprete">
+                                <xs:complexType>
+                                    <xs:attribute name="nom"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="titulo"></xs:element>
+                            <xs:element name="discografica" minOccurs="0" default="CBS">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Sony"></xs:enumeration>
+                                        <xs:enumeration value="CBS"></xs:enumeration>
+                                        <xs:enumeration value="SIRE"></xs:enumeration>
+                                        <xs:enumeration value="OTRAS"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="anio">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:integer">
+                                            <xs:annotation>
+                                                <xs:appinfo>
+                                                    <xs:pattern value="[0-9]{4}"></xs:pattern>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:attribute name="mes"></xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="stock">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:pattern value="[0-2]{0,1}[0-9]{0,1}[0-9]{1}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="precio">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"></xs:fractionDigits>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <xs:simpleType name="longitudTexto">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\D{1,50}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+<!-- 
+L'element grup opcionalment pot tindre, o bé una adreça web i una adreça de correu electrònic, o bé una adreça postal formada per carrer i localitat (però no ambdues alhora). L'adreça de correu i la pàgina han de pertànyer al domini "ponprecioamimusica.org".
+Els camps de text no poden superar cap els 50 caràcters (elements que no estiguen ja restringits per una altra regla).
+
+
+-->

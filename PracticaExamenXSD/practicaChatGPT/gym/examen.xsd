@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="gimnasio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre"></xs:element>
+                            <xs:element name="planeta_origen"></xs:element>
+                            <xs:element name="habilidades">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="habilidad" minOccurs="1" maxOccurs="3">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="tipo">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:enumeration value="genética"></xs:enumeration>
+                                                                    <xs:enumeration
+                                                                        value="adquirida"></xs:enumeration>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="c_[0-9]{3}_[m|f]"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="edad">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="1[8-9]|[2-9][0-9]{1,}|Desconocida"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="tipo_membresia">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                   <xs:enumeration value="mensual"></xs:enumeration>
+                                   <xs:enumeration value="anual"></xs:enumeration>
+                                   <xs:enumeration value="semestral"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="biblioteca.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<biblioteca>
+    <seccion nombre="Ciencia Ficción" codigo="CF-001">
+        <libro id="L_001" paginas="320" formato="Físico">
+            <titulo>El Horizonte Perdido</titulo>
+            <autor>Maximilian Star</autor>
+            <publicado>Anio_2120</publicado>
+            <disponible>Si</disponible>
+            <editorial>Galactic Press</editorial>
+            <prestamos>
+                <prestamo usuario="U_1001" fecha_prestamo="2122-05-10" fecha_devolucion="2122-06-10" metodo="Online"/>
+                <prestamo usuario="U_1002" fecha_prestamo="2123-02-15" fecha_devolucion="2123-03-15" metodo="Presencial"/>
+            </prestamos>
+        </libro>
+    </seccion>
+    <seccion nombre="Historia" codigo="H-002">
+        <libro id="L_002" paginas="415" formato="Digital">
+            <titulo>Las Crónicas del Pasado</titulo>
+            <autor>Helena Vortex</autor>
+            <publicado>Anio_1998</publicado>
+            <disponible>No</disponible>
+            <editorial>Historia Viva</editorial>
+        </libro>
+        <libro id="L_003" paginas="290" formato="Físico">
+            <titulo>Imperios Olvidados</titulo>
+            <autor>Arthur Millstone</autor>
+            <publicado>Anio_2005</publicado>
+            <disponible>Si</disponible>
+            <editorial>Legacy Books</editorial>
+            <prestamos>
+                <prestamo usuario="U_2001" fecha_prestamo="2023-07-01" fecha_devolucion="2023-07-30" metodo="Online"/>
+            </prestamos>
+        </libro>
+    </seccion>
+</biblioteca>
