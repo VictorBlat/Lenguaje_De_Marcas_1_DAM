@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="examen.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<guardianes>
+    <guardian id="g_125_m" planeta_origen="Tierra" edad="38">
+        <nombre>Peter Quill</nombre>
+        <alias>Star-Lord</alias>
+        <especie>Humano</especie>
+        <rol>Líder</rol>
+        <habilidades>
+            <habilidad tipo="adquirida">Experto tirador</habilidad>
+            <habilidad tipo="adquirida">Piloto experto</habilidad>
+        </habilidades>
+    </guardian>
+    <guardian id="g_05_f" planeta_origen="Zen-Whoberi" edad="29">
+        <nombre>Gamora</nombre>
+        <alias>La mujer más letal de la galaxia</alias>
+        <especie>Zen-Whoberiana</especie>
+        <rol>Guerrera</rol>
+        <habilidades>
+            <habilidad tipo="adquirida">Maestra en artes marciales</habilidad>
+            <habilidad tipo="adquirida">Fuerza mejorada</habilidad>
+        </habilidades>
+    </guardian>
+    <guardian id="g_00026_m" planeta_origen="Kylos" edad="35">
+        <nombre>Drax</nombre>
+        <alias>El Destructor</alias>
+        <especie>Kylosiano</especie>
+        <rol>Guerrero</rol>
+        <habilidades>
+            <habilidad tipo="genética">Superfuerza</habilidad>
+            <habilidad tipo="genética">Durabilidad</habilidad>
+        </habilidades>
+    </guardian>
+    <guardian id="g_987_m" planeta_origen="Halfworld" edad="Desconocida">
+        <nombre>Rocket Raccoon</nombre>
+        <alias>Rocket</alias>
+        <especie>Mapache</especie>
+        <cometido>Estratega</cometido>
+        <habilidades>
+            <habilidad tipo="adquirida">Ingeniero experto</habilidad>
+            <habilidad tipo="adquirida">Estratega maestro</habilidad>
+        </habilidades>
+    </guardian>
+    <guardian id="g_2098_o" planeta_origen="Planeta X" edad="Desconocida">
+        <nombre>Groot</nombre>
+        <alias>Groot</alias>
+        <especie>Flora Colossus</especie>
+        <rol>Defensor</rol>
+        <habilidades>
+            <habilidad tipo="genética">Regeneración</habilidad>
+            <habilidad tipo="genética">Superfuerza</habilidad>
+        </habilidades>
+    </guardian>
+</guardianes>

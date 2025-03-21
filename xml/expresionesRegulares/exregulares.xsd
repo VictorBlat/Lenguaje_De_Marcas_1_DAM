@@ -1,5 +1,16 @@
-<!-- Url segura -> /https:\/\/\D{2,}\.[a-z]{2,4} 
-
-Email -> [a-z | \d]+@+[a-z]+\.[a-z]{2,4} 
-
-Codigo: ->[a-z 0-9]+ {3, } Url segura --> 
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="exRegulares"> 
+        <xs:complexType> 
+            <xs:sequence> 
+                <xs:element name="urlsegura" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+                <xs:element name="fecha-de-nacimiento" type="xs:date" minOccurs="1" maxOccurs="1"/> 
+                <xs:element name="hora" type="xs:time" minOccurs="1" maxOccurs="1"/> 
+                <xs:element name="nota" type="xs:decimal" minOccurs="1" maxOccurs="1"/> 
+                <xs:element name="apto" type="xs:boolean" minOccurs="1" maxOccurs="1"/> 
+                <xs:element name="puertaAbierta" type="xs:boolean" minOccurs="1" maxOccurs="1" default="true"/> 
+                <xs:element name="ventanaCerrada" type="xs:boolean" minOccurs="1" maxOccurs="1" fixed="false"/> 
+            </xs:sequence> 
+        </xs:complexType> 
+    </xs:element> 
+</xs:schema>

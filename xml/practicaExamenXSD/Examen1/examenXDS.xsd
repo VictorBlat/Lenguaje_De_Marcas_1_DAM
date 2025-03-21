@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="discos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="grupo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+                        <xs:element name="miembro" type="xs:string" minOccurs="1" maxOccurs="unbounded"/> 
+                        <xs:element name="nacionalidad" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+                        <xs:element name="nota" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+                        <xs:element name="web" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+                    </xs:sequence>
+                    <xs:attribute name="nom">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

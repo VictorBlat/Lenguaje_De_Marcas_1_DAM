@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="puerto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="atraque" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="barco">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="capitan" type="longitudTexto"></xs:element>
+                                        <xs:element name="eslora">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="unidad" type="unidad"></xs:attribute>
+                                                    </xs:extension>
+
+                                                </xs:simpleContent>
+
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="manga">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="unidad" type="unidad">
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="calado">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="decimal">
+                                                        <xs:attribute name="unidad" type="unidad">
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="B[1-9][0-9]{0,}"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="nombre" type="longitudTexto"></xs:attribute>
+                                    <xs:attribute name="tipo" default="Carga">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Carga"></xs:enumeration>
+                                                <xs:enumeration value="Pasajeros"></xs:enumeration>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="A[1-9][0-9]{0,}"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="muelle">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:enumeration value="1"></xs:enumeration>
+                                    <xs:enumeration value="2"></xs:enumeration>
+                                    <xs:enumeration value="3"></xs:enumeration>
+                                    <xs:enumeration value="4"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="fecha">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:date"></xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="longitudTexto"></xs:attribute>
+            <xs:attribute name="ubicacion">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Barcelona"></xs:enumeration>
+                        <xs:enumeration value="Valencia"></xs:enumeration>
+                        <xs:enumeration value="Algeciras"></xs:enumeration>
+                        <xs:enumeration value="Las Palmas"></xs:enumeration>
+                        <xs:enumeration value="Bilbao"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="longitudTexto">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\D{2,200}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unidad">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="metros|pies|pulgadas"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="decimal">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="1"></xs:fractionDigits>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+<!-- para la pregunta H he seleccionado el decimal para que acepte el fractionDigits y porder
+seleccionar
+cuantos decimales quiero -->

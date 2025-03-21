@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="examen.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<puerto nombre="Puerto Internacional" ubicacion="Barcelona">
+    <atraque id="A1" muelle="1" fecha="2025-03-10">
+        <barco id="B1236" nombre="MarinerX" tipo="Carga">
+            <capitan>Juan Gómez</capitan>
+            <eslora unidad="metros">250.5</eslora>
+            <manga unidad="metros">35.2</manga>
+            <calado unidad="metros">12.8</calado>
+        </barco>
+    </atraque>
+    <atraque id="A102" muelle="3" fecha="2025-03-11">
+        <barco id="B456" nombre="OceanQueen" tipo="Pasajeros">
+            <capitan>Ana Rodríguez</capitan>
+            <eslora unidad="metros">300.3</eslora>
+            <manga unidad="metros">40.5</manga>
+            <calado unidad="metros">10.2</calado>
+        </barco>
+    </atraque>
+</puerto>
