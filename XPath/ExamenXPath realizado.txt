@@ -1,0 +1,48 @@
+Examen 1ºCFGS 
+xPath 
+Instrucciones: 
+• Lee el examen completamente antes de empezar a realizarlo. 
+• El examen se hará individualmente y quedará automáticamente suspenso si tienes 
+ningún tipo de comunicación, utilización de dispositivos digitales, IA o internet. 
+• La duración será de 1 sesión (55’). 
+• A partir del archivo XML proporcionado (lordOfTheRings.xml) realiza las siguientes 
+consultas utilizando xPath. 
+• Entrega un archivo de texto en el que aparezcan perfectamente especificadas las 
+respuestas a cada pregunta, considerando que en alguna de ellas se te pide más de 
+una solución.
+ 
+Resuelve como consideres oportuno las siguientes consultas: 
+1. ¿Quiénes son los rivales de Gandalf? (20%) 
+<nombre>Saruman</nombre> 
+
+Respuesta: //personaje[nombre='Gandalf']/relaciones/relacion[tipo='Rival']/nombre
+
+2. Nombres de los Hobbits (20%) 
+Frodo Bolsón 
+Gollum 
+
+Respuesta: //personaje[raza='Hobbit']/nombre
+
+Resuelve en 1 y 2 pasos la siguiente consulta: 
+3. Nombre de los lugares cuya descripción contiene las palabras "montañas" o 
+"Montañas". (30%) 
+<nombre>Rivendel</nombre> 
+<nombre>Moria</nombre> 
+<nombre>Montañas Nubladas</nombre> 
+
+Respuesta 1://lugar/nombre[contains(../descripcion,"Montaña") or contains(../descripcion,"montaña")]
+Respuesta 2://lugar[contains(descripcion,"Montaña") or contains(descripcion,"montaña")]/nombre
+
+Resuelve con expresiones anidadas la siguiente consulta: 
+4. Descripciones de los lugares donde ha estado Arwen (30%) 
+<descripcion>También conocida como Imladris, es la morada de Elrond, un refugio 
+élfico oculto en las montañas, donde se celebró el Concilio de 
+Elrond.</descripcion> 
+<descripcion>Un bosque dorado y mágico habitado por los elfos, gobernado por 
+Galadriel y Celeborn, conocido por sus grandes árboles mallorn y sus poderosas 
+defensas.</descripcion> 
+<descripcion>Un reino humano en el sur de la Tierra Media, conocido por su ciudad 
+capital, Minas Tirith, y por ser uno de los últimos bastiones contra la oscuridad de 
+Mordor.</descripcion>
+
+Respuesta://lugar/descripcion[../nombre = //personaje[nombre = "Arwen"]/lugares/lugar]

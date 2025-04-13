@@ -1,0 +1,35 @@
+1. ¿Qué personajes han estado en “Mordor”?
+<nombre>Frodo Bolsón</nombre>
+<nombre>Sauron</nombre>
+<nombre>Aragorn</nombre>
+<nombre>Gandalf</nombre>
+<nombre>Gollum</nombre>
+<nombre>Saruman</nombre>
+
+Respuesta: //personaje/nombre[../lugares/lugar = "Mordor"]
+
+2. ¿Qué personajes tienen alguna relación de tipo “Aliado”?
+<nombre>Frodo Bolsón</nombre>
+<nombre>Sauron</nombre>
+<nombre>Aragorn</nombre>
+<nombre>Gandalf</nombre>
+<nombre>Arwen</nombre>
+<nombre>Galadriel</nombre>
+<nombre>Saruman</nombre>
+<nombre>Faramir</nombre>
+
+Respuesta: //personaje/nombre[../relaciones/relacion/tipo = "Aliado"]
+
+3. Nombres de lugares cuya descripción menciona “elfo” o “elfos”
+Hazlo en 1 y 2 pasos.
+<nombre>Lothlórien</nombre>
+
+Respuesta1://lugar/nombre[contains(../descripcion,"elfo") or contains(../descripcion,"elfos")]
+Respuesta2://lugar[contains(descripcion,"elfo") or contains(descripcion,"elfos")]/nombre
+
+
+4. Descripciones de los lugares visitados por Gandalf que contienen la palabra “oscura” o “oscuro”
+<descripcion>La tierra oscura y devastada al este de la Tierra Media, dominada por el Señor Oscuro Sauron, donde se encuentra el Monte del Destino y la torre de Barad-dûr.</descripcion>
+
+
+Respuesta: //lugar[contains(descripcion, "oscuro") or contains(descripcion, "oscura")]/descripcion[../nombre = //personaje[nombre = "Gandalf"]/lugares/lugar]
